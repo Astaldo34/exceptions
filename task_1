@@ -1,0 +1,14 @@
+Scanner sc = new Scanner(System.in);
+System.out.print("Введите дробное число: ");
+      
+try {
+  float num = sc.nextFloat();
+} catch (ArithmeticException e) {
+  System.out.println(e + "Ввели не корректное число, попробуйте ещё раз");
+  main();
+} catch (Exception e) {
+  System.out.println(e + "Введено не допустимое значение, попробуйте ещё раз");
+  main();
+} finally {
+  sc.close();
+}
